@@ -56,7 +56,7 @@ body {
 
 #header #logo {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 0.4px;
 }
 
@@ -210,7 +210,7 @@ body {
     font-weight: 600;
     border-radius: 5px;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 20px;
     margin-top: 15px;
     font-size: 16px;
     font-family: Prata, sans-serif;
@@ -222,7 +222,7 @@ body {
     font-weight: 600;
     border-radius: 5px;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 20px;
     margin-top: 15px;
     font-size: 16px;
     font-family: Prata, sans-serif;
@@ -262,11 +262,11 @@ body {
 #main__header #main__header_img {
     background-image: url('./assets/Hero Image (Mobile).png');
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: right;
     background-size: contain;
-    height: 42vh;
     width: 100%;
     object-fit: cover;
+    height: 50vh;
 }
 
 #main__header_details {
@@ -421,6 +421,7 @@ body {
 .description p a {
     color: rgb(80, 80, 80);
     font-weight: 600;
+    text-decoration: underline;
 }
 
 .description p a:hover,
@@ -486,7 +487,7 @@ body {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #footer_menu div {
@@ -614,9 +615,113 @@ body {
 }
 
 @media (min-width: 1020px) {
+    #header,
+    #footer {
+        padding: 20px 15%;
+    }
+    #main__header {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding: 0 15%;
+    }
     #header #menu {
         display: flex;
         justify-content: center;
         margin-top: 8px;
+        margin-right: 20px;
+    }
+    #main__header #main__header_img {
+        grid-area: main__header_img;
+        background-image: url('./assets/Hero Image (Desktop).png');
+        grid-column: 7 / span 8;
+        width: 100%;
+        height: 450px;
+        margin-bottom: 25px;
+    }
+    #main__header #main__header_details {
+        grid-area: main__header_details;
+        grid-column: 1 / span 6;
+        row-gap: 0px;
+    }
+    #main__header_details {
+        display: block;
+    }
+    #main__main {
+        padding: 0 15% 0 15%;
+    }
+    #about {
+        padding: 40px 0 0 8%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    #about #about_text {
+        grid-area: about_title;
+        grid-column: 1 / span 5;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    #about #banner {
+        background-image: url('./assets/Phone Mockup (Desktop).png');
+        grid-area: about_banner;
+        grid-column: 7 / span 8;
+        background-position: right;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+    }
+    #info {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    #info #info_text {
+        grid-area: info_title;
+        grid-column: 7 / span 8;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    #info #banner {
+        grid-area: info_banner;
+        grid-column: 1 / span 6;
+        background-position: top;
+        background-size: contain;
+        height: 350px;
+        width: 100%;
+    }
+    #footer {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        height: 180px;
+        row-gap: 0;
+    }
+    #footer #footer_text {
+        grid-area: footer_title;
+        grid-column: 1 / span 4;
+        width: 100%;
+        align-self: baseline;
+        margin-top: 20px;
+    }
+    #footer #footer_menu {
+        grid-area: footer_banner;
+        grid-column: 6 / span 8;
+        background-position: top;
+        background-size: contain;
+        width: 100%;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    #footer_menu #sitemap {
+        grid-area: footer_sitemap;
+        grid-column: 1 / span 3;
+    }
+    #footer_menu #resources {
+        grid-area: footer_resources;
+        grid-column: 4 / span 6;
+    }
+    #footer_menu #company {
+        grid-area: footer_company;
+        grid-column: 7/ span 9;
+    }
+    #footer_menu #oportunities {
+        grid-area: footer_oportunitiesp;
+        grid-column: 10 / span 12;
     }
 }
