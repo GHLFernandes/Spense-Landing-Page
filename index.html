@@ -10,7 +10,171 @@
 </head>
 
 <body>
+    <div id="container">
+        <div id="info_banner">
+            <p>🎉 To celebrate Spense's lauch, we will be waiving all fees for the entire month of April. </p>
+            <p><span>You will be reciving 100% of the earnings.</span> 🎉</p>
+        </div>
+        <div class="item" id="header">
+            <div class="item" id="logo">
+                spense.
+            </div>
 
+
+            <div class="item" id="menu">
+                <div class="item" id="nav">
+                    <div id="hamburger" onclick="handleClick(this)">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <nav id="nav-menu">
+                    <ul>
+                        <a href="#">
+                            <li>Business</li>
+                        </a>
+                        <a href="#">
+                            <li>Pricing</li>
+                        </a>
+                        <a href="#">
+                            <li>Features</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="item" id="main">
+            <div id="main__header">
+                <div id='main__header_img'></div>
+                <div id="main__header_details">
+                    <div class="title">
+                        <h2>Share your unfiltered thoughts. Get paid.</h2>
+                    </div>
+
+                    <div class="description">
+                        <p>Spence is an open platform for individuals to share their unfiltered thoughts. Discuss the topics you love, and get paid for doing <i>just</i> that.</p>
+
+                        <ul>
+                            <li>Receive 99% off the earnings.</li>
+                            <li>Get paid via Debit Card, ACH, or PayPal.</li>
+                            <li>Withdraw your earnings anytime.</li>
+                        </ul>
+
+                        <form>
+                            <input type="text" placeholder="john@example.com" />
+                            <button id="header-submit">Get Started</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main__main">
+                <div id="clients">
+                    <img src="assets/Facebook Logo.png" alt="Facebook Logo" />
+                    <img src="assets/Dribbble Logo.png" alt="Dribbble Logo" />
+                    <img src="assets/Youtube Logo.png" alt="Youtube Logo" />
+                </div>
+
+                <div id="about">
+                    <div class="title">
+                        <h2>Secure your money with Escrow.</h2>
+                    </div>
+
+                    <div class="description">
+                        <p>Spence is an open platform for individuals to share their unfiltered thoughts. Discuss the topics you love, and get paid for doing <i>just</i> that.</p>
+                        <p><a href="#">Learn more about Escorw &#8594;</a></p>
+                    </div>
+
+                    <div id="banner">
+                    </div>
+                </div>
+
+                <div id="info">
+                    <div class="title">
+                        <h2>A text editor like no other.</h2>
+                    </div>
+
+                    <div class="description">
+                        <p>Spence is an open platform for individuals to share their unfiltered thoughts. Discuss the topics you love, and get paid for doing <i>just</i> that.</p>
+                        <p><a href="#">Text Editor Live Demo &#8594;</a></p>
+                    </div>
+
+                    <div id="banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" id="footer">
+            <div class="item" id="logo">
+                spense.
+            </div>
+            <div class="description">
+                <p>Spence is an open platform for individuals to share their unfiltered thoughts. Discuss the topics you love, and get paid for doing <i>just</i> that.</p>
+            </div>
+
+            <div id="footer_menu">
+                <div id="company">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div id="oportunities">
+                    <h4>Oportunities</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+                <div id="sitemap">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                    </ul>
+                </div>
+                <div id="resources">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleClick(elem) {
+            var navBurger = document.getElementById('nav-menu');
+
+            if (elem.className.includes('active')) {
+                elem.classList.remove('active')
+                if (navBurger.className.includes('active')) {
+                    navBurger.classList.remove('active')
+                }
+            } else {
+                elem.classList.add('active');
+                navBurger.classList.add('active');
+            }
+        }
+
+        // Change values when window is resized
+        window.onresize = function() {
+            var width = screen.width;
+
+            if (width >= '1020') {
+                document.getElementById('nav-menu').classList.remove('active')
+                document.getElementById('hamburger').classList.remove('active')
+            }
+
+        };
+    </script>
 </body>
 
 </html>

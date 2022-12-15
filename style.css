@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    font-family: 'Cabin', sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+#info_banner {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+#info_banner p {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#info_banner p span {
+    text-decoration: underline;
+}
+
+.item {
+    display: grid;
+    padding: 10px 0px;
+}
+
+#header,
+#footer {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(233, 229, 231);
+}
+
+#header #logo {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+}
+
+#header #hamburger {
+    display: flex;
+    align-items: flex-end;
+    width: 40px;
+    flex-flow: column nowrap;
+    gap: 4.5px;
+}
+
+#hamburger div {
+    width: 23px;
+    height: 0.1rem;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+    background-color: black;
+    border: 1px solid black;
+    position: relative;
+}
+
+.active div:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: black !important;
+    z-index: 99;
+}
+
+.active div:nth-child(2) {
+    transform: translateX(100%);
+    opacity: 0;
+    background-color: black !important;
+    z-index: 99;
+}
+
+.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: black !important;
+    z-index: 99;
+}
+
+#nav-menu {
+    transform-origin: 1px;
+    transition: all 3s ease-out;
+}
+
+#nav-menu ul {
+    background-color: rgb(240, 240, 240);
+    transform-origin: 1px;
+    top: 0;
+    right: 0;
+}
+
+#header #nav-menu ul {
+    list-style: none;
+    display: none;
+    width: 150px;
+    height: 100vh;
+}
+
+.active ul {
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 70px;
+}
+
+.active li {
+    padding: 20px 10px;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+}
+
+.active li:hover,
+.active li:focus,
+.active a li:hover,
+.active a li:focus {
+    background-color: black;
+    color: white !important;
+    padding: 20px 10px;
+}
+
+.active a {
+    text-decoration: none;
+    color: black;
+}
+
+.active a li:hover,
+.active a li:focus {
+    color: white !important;
+}
+
+#main {
+    background-color: rgb(233, 229, 231);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#main__header {
+    display: grid;
+    padding: 0 20px;
+    background-color: rgb(233, 229, 231);
+}
+
+#main__header #main__header_img {
+    background-image: url('./assets/Hero Image (Mobile).png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 42vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#main__header_details {
+    display: grid;
+    padding: 10px 0px;
+}
+
+.title {
+    font-size: 24px;
+    margin: 10px 0;
+    margin-top: 15px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 25px;
+    color: rgb(70, 69, 69);
+}
+
+#main__header_details ul {
+    font-size: 16px;
+    padding: 10px 0px;
+    line-height: 25px;
+    font-weight: 600;
+    color: rgb(70, 69, 69);
+    list-style: none;
+}
+
+#main__header_details ul li::before {
+    content: '';
+    background-image: url('./assets/Checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#main__header_details form {
+    margin: 5px 0;
+}
+
+#main__header_details input {
+    width: 40%;
+    height: 45px;
+    border: 1px solid rgb(165, 164, 164);
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#main__header_details button {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+#main__main {
+    background-color: white;
+    padding: 10px 20px;
+}
+
+#clients {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+
+#clients img {
+    width: 105px;
+    height: 23px;
+}
+
+#about {
+    display: grid;
+    row-gap: 15px;
+    background-color: rgb(233, 229, 231);
+    border-radius: 10px;
+    padding: 40px 30px 0 30px;
+}
+
+.description p a {
+    color: rgb(80, 80, 80);
+    font-weight: 600;
+}
+
+.description p a:hover,
+.description p a:focus {
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+}
+
+#about .description p:last-child,
+#info .description p:last-child {
+    padding-top: 20px;
+}
+
+#about #banner {
+    background-image: url('./assets/Phone Mockup (Mobile).png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 390px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#info {
+    display: grid;
+    row-gap: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+#info #banner {
+    background-image: url('./assets/Text Editor.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#footer {
+    display: grid;
+    row-gap: 5px;
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}
+
+#footer .description {
+    font-size: 16px;
+    line-height: 25px;
+    color: rgb(70, 69, 69);
+}
+
+#footer #logo {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+}
+
+#footer_menu {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+#footer_menu div {
+    padding-top: 30px;
+}
+
+#footer_menu div h4 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#footer_menu div ul {
+    font-size: 18px;
+    padding: 10px 0px;
+    line-height: 25px;
+    font-weight: 400;
+    list-style: none;
+}
+
+#footer_menu div li {
+    padding-top: 5px;
+}
+
+#footer_menu a:hover,
+#footer_menu a:focus {
+    cursor: pointer;
+    color: rgb(184, 184, 184);
+}
+
+#footer_menu a {
+    text-decoration: none;
+    color: rgb(134, 134, 134);
+}
+
+@media (min-width: 720px) {}
+
+@media (min-width: 1020px) {}
